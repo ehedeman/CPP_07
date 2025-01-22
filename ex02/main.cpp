@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:05:15 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/22 14:33:44 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/22 14:37:53 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ int main()
 	std::cout << a << std::endl;
 	fillArray(a, 5);
 	printArray(a, 5);
+	delete (a);
 }

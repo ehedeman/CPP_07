@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:48:26 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/22 14:30:58 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/22 14:36:50 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ template <typename T> Array<T>::Array(const Array &copy)
 
 template <typename T> Array<T>::~Array()
 {
+	delete[](this->array);
 	std::cout << "Array Destructor called" << std::endl;
-	delete(this->array);
 }
 
 template <typename T> Array<T> &Array<T>::operator=(const Array &src)

@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:48:29 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/22 14:30:04 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/22 14:37:14 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 	
 	T					*getArray()const;
 	unsigned int		getSize(void)const;	//returns size parameter
-	unsigned int	size(void)const;	//returns amount of elements
+	unsigned int		size(void)const;	//returns amount of elements
 
 	class 				WrongIndexException : public std::exception
 	{
