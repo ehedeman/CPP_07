@@ -6,10 +6,11 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:05:12 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/22 13:30:53 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:46:00 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <iostream>
 
 template <typename t>
