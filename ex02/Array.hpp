@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:48:29 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/22 14:37:14 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:38:56 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 						~Array();
 	
 	Array				&operator=(const Array &src);	// remember deep copy
-	T					&operator[](unsigned int index);					//subscipt operator overload
+	T					&operator[](unsigned int index);		//subscipt operator overload
 	
 	T					*getArray()const;
 	unsigned int		getSize(void)const;	//returns size parameter

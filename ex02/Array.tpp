@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 13:48:26 by ehedeman          #+#    #+#             */
-/*   Updated: 2025/01/22 14:36:50 by ehedeman         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:50:18 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,18 @@ template <typename T> Array<T> &Array<T>::operator=(const Array &src)
 	if (this == &src)
 		return *this;
 	this->_size = src.getSize();
-	this->array = new T[this->_size];
+	this->array = new T[this->_size];	//deep copy
 	for (size_t i = 0; i < src.getSize(); i++)
 		this->array[i] = src.getArray()[i];
+	return *this;
 }
 
 template <typename T> T	&Array<T>::operator[](unsigned int index)
 {
-	if (index >= this->_size) {
-		throw WrongIndexException();
-	}
+	if (index >= this->_size || this->array == NULL)
+	{
+		throw Array<T>::WrongIndexException();
+	} 
 	return this->array[index];
 }
 
@@ -63,7 +65,7 @@ template <typename T> unsigned int Array<T>::size(void)const
 {
 	unsigned int i = 0;
 
-	while (this[i])
+	while (this->getArray()[i])
 		i++;
 	return (i);
 }
